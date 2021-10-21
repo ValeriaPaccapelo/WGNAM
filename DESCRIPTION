@@ -1,0 +1,19 @@
+Package: wgnam
+Type: Package
+Title: Whole Genome Nested Association Mapping for QTL detection using mixed models
+Version: 0.1.0
+Author: Ari Verbyla and Valeria Paccapelo
+Maintainer: Valeria Paccapelo <Valeria.Paccapelo@daf.qld.gov.au>
+Description: This package provides tools for constucting marker-based
+    objects to be used in QTL analysis for Nested Association Mapping
+    (NAM) populations and a whole genome approach to detecting putative QTL using
+    probabilities of inheriting founder alleles.
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 3.6.0)
+SystemRequirements: asreml-R 3.x 
+LazyData: yes
+ByteCompile: yes
+Imports: 
+ lattice,MASS,asreml,mpwgaim
+RoxygenNote: 7.1.2
