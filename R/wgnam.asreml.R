@@ -319,6 +319,7 @@ phenoData apppropriately\n")
         cat("\nLikelihood Ratio Test Statistic: ", stat, ", P-value: ", pvalue,"\n\n")
         dmat[which.i, ] <- c(baseLogL, add.mark$loglik, stat, pvalue)
         if (pvalue > TypeI)
+          message("QTL was not significant")
             break
         add.mark$call$data <- quote(phenoData)
         pick <- nam.pick(add.mark, phenoData, mbfObj, myby, aped, prop, res, Con.mat,
@@ -359,7 +360,7 @@ phenoData apppropriately\n")
     add.mark$Assoc$founders <- namObj$founders
     add.mark$Assoc$nfounders <- nfounders
     add.mark$Assoc$diag$dmat <- dmat
-    add.mark$Assoc$diag$ugtilde <- ugtilde
+    if(exists("ugtilde")) {add.mark$Assoc$diag$ugtilde <- ugtilde}
     add.mark$Assoc$diag$blups <- blups
     add.mark$Assoc$diag$oint <- oint
     add.mark$Assoc$aped <- aped
