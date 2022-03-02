@@ -160,7 +160,7 @@ This may have consequences for other effects in your model.\n\n")
     diff <- unique(abs(basedata[[names(whn)]] - phenoData[[names(whn)]]))
     if (length(diff[!is.na(diff)]) > 1)
         stop("Phenotypic data is not in same order as baseModel data.\n Try reordering
-phenoData apppropriately\n")
+phenoData appropriately\n")
     int.cnt <- 2:dim(geneticData)[2]
     state <- rep(1, length(int.cnt))
     names(state) <- names(geneticData[, int.cnt])
