@@ -318,9 +318,9 @@ phenoData appropriately\n")
         if(pvalue < 0) pvalue <- 0
         cat("\nLikelihood Ratio Test Statistic: ", stat, ", P-value: ", pvalue,"\n\n")
         dmat[which.i, ] <- c(baseLogL, add.mark$loglik, stat, pvalue)
-        if (pvalue > TypeI)
+        if (pvalue > TypeI){
           message("QTL was not significant")
-            break
+            break}
         add.mark$call$data <- quote(phenoData)
         pick <- nam.pick(add.mark, phenoData, mbfObj, myby, aped, prop, res, Con.mat,
                            state, verboseLev, ...)
